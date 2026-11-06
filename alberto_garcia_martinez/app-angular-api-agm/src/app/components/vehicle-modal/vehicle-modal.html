@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ vehicleDetail?.name }}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Modelo:</strong> {{ vehicleDetail?.model }}</li>
+        <li class="list-group-item"><strong>Fabricante:</strong> {{ vehicleDetail?.manufacturer }}</li>
+        <li class="list-group-item"><strong>Clase:</strong> {{ vehicleDetail?.vehicle_class }}</li>
+        <li class="list-group-item"><strong>Coste (créditos):</strong> {{ vehicleDetail?.cost_in_credits }}</li>
+        <li class="list-group-item"><strong>Longitud:</strong> {{ vehicleDetail?.length }} m</li>
+        <li class="list-group-item"><strong>Velocidad máxima:</strong> {{ vehicleDetail?.max_atmosphering_speed }}</li>
+        <li class="list-group-item"><strong>Tripulación:</strong> {{ vehicleDetail?.crew }}</li>
+        <li class="list-group-item"><strong>Pasajeros:</strong> {{ vehicleDetail?.passengers }}</li>
+        <li class="list-group-item"><strong>Capacidad de carga:</strong> {{ vehicleDetail?.cargo_capacity }}</li>
+        <li class="list-group-item"><strong>Autonomía:</strong> {{ vehicleDetail?.consumables }}</li>
+        <li class="list-group-item"><strong>Aparece en:</strong> {{ vehicleDetail?.films?.length }} películas</li>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="activeModal.close()">Cerrar</button>
+</div>

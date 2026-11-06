@@ -1,0 +1,7 @@
+<h1 class="mb-4">Films</h1>
+
+<div class="row">
+    @for (item of filmList(); track item.url) {
+    <app-film-item-component [film]="item"></app-film-item-component>
+    }
+</div>

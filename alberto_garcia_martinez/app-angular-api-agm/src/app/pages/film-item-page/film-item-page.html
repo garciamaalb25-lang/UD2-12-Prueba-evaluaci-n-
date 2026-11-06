@@ -1,0 +1,34 @@
+<div class="row mb-3">
+    <div class="col-12">
+        <a routerLink="/film-list" class="btn btn-outline-secondary mb-3">&larr; Volver a Films</a>
+        <h1>Detalle Film</h1>
+    </div>
+</div>
+
+@if (film(); as f) {
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title">{{ f.title }}</h3>
+                <h6 class="card-subtitle mb-3 text-body-secondary">Episodio {{ f.episode_id }}</h6>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item"><strong>Director:</strong> {{ f.director }}</li>
+                    <li class="list-group-item"><strong>Productor:</strong> {{ f.producer }}</li>
+                    <li class="list-group-item"><strong>Fecha de estreno:</strong> {{ f.release_date }}</li>
+                    <li class="list-group-item"><strong>Personajes:</strong> {{ f.characters.length }}</li>
+                    <li class="list-group-item"><strong>Planetas:</strong> {{ f.planets.length }}</li>
+                    <li class="list-group-item"><strong>Naves:</strong> {{ f.starships.length }}</li>
+                    <li class="list-group-item"><strong>Vehículos:</strong> {{ f.vehicles.length }}</li>
+                </ul>
+                <h5>Opening crawl</h5>
+                <p class="card-text opening-crawl">{{ f.opening_crawl }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+} @else {
+<div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Cargando...</span>
+</div>
+}

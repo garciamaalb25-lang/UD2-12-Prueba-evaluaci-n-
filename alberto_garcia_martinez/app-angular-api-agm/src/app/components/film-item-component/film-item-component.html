@@ -1,0 +1,14 @@
+<div class="card h-100 shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">{{ film()?.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Episodio {{ film()?.episode_id }}</h6>
+        <ul class="list-unstyled card-text">
+            <li><strong>Director:</strong> {{ film()?.director }}</li>
+            <li><strong>Productor:</strong> {{ film()?.producer }}</li>
+            <li><strong>Estreno:</strong> {{ film()?.release_date }}</li>
+        </ul>
+    </div>
+    <div class="card-footer bg-transparent border-0">
+        <a class="btn btn-primary" [routerLink]="['/film-detail', getFilmId()]">Ver detalle</a>
+    </div>
+</div>
